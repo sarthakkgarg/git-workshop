@@ -1,0 +1,5 @@
+console.log("Name : Sarthak Garg")
+console.log("Age : 19")
+console.log("City : Vidisha")
+console.log("State : Madhya Pradesh")
+console.log("Country : India")

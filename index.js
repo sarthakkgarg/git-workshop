@@ -1,3 +1,3 @@
-console.log(" We are using this code for new-feature")
+console.log("This is the code of new-feature branch")
 
 

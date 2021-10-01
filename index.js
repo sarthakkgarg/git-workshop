@@ -1,7 +1,9 @@
-<<<<<<< HEAD
-console.log("we are using this code for development branch")
-=======
-console.log(" We are using this code for new-feature")
-
->>>>>>> 3f2e40dde03bb1e6fa8a9ce87cdee9953e4fecf0
+console.log("Name : Sarthak Garg")
+console.log("Age : 19")
+console.log("City : Vidisha")
+console.log("State : Madhya Pradesh")
+console.log("Country : India")
+console.log("Gender : Male")
+console.log("Development")
+console.log("We are Adding this in main branch")
 

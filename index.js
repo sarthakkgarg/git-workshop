@@ -1,9 +1,8 @@
-console.log("Name : Sarthak Garg")
-console.log("Age : 19")
-console.log("City : Vidisha")
-console.log("State : Madhya Pradesh")
-console.log("Country : India")
-console.log("Gender : Male")
-console.log("Development")
-console.log("We are Adding this in main branch")
+console.log("new-feature branch")
+// Add some other properties 
+console.log("School : School Name")
+console.log("College : College Name")
+console.log("Student ID : ID")
+console.log("Father's Name : Name")
+console.log("Mothers's Name : Name")
 

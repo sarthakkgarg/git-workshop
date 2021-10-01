@@ -1,3 +1,3 @@
-console.log("We are Using this Code for Development Branch")
-console.log("We are changing codes here!!")
+console.log("We are using this code for development branch")
+console.log("here we are changing codes")
 

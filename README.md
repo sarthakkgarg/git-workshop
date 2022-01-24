@@ -4,6 +4,11 @@
 [![License](https://img.shields.io/cocoapods/l/XDC3Swift.svg?style=flat)](https://cocoapods.org/pods/XDC3Swift)
 [![Platform](https://img.shields.io/cocoapods/p/XDC3Swift.svg?style=flat)](https://cocoapods.org/pods/XDC3Swift)
 
+A dart library that connects to interact with the xdc blockchain. It connects to an xdc node to send transactions, interact with smart contracts and much more!
+
+XRC20 Methods:
+1.getName  2.getDecimal  3.getSymbol  4.getTotalSupply  5.getAllowance  6.getBalanceOf  7.getApprove  8.decreaseAllowance  9.increaseAllowance  10.transferFrom 11.transferToken  12.transferXDC
+
 ## Example
 
 To run the example project, clone the repo, and run `dart pub get` from the Example directory first.
@@ -25,40 +30,18 @@ Import 'package:XDC3DART';
 ```
 Creating a XDC account
 ```
-    void createAcount() {
-    AsymmetricKeyPair<RSAPublicKey, RSAPrivateKey> generateRSAkeyPair(
-        SecureRandom secureRandom,
-        {int bitLength = 2048}) {
-      // Create an RSA key generator and initialize it
-
       final keyGen = RSAKeyGenerator()
         ..init(ParametersWithRandom(
             RSAKeyGeneratorParameters(BigInt.parse('65537'), bitLength, 64),
             secureRandom));
 
-      // Use the generator
-
       final pair = keyGen.generateKeyPair();
-
-      // Cast the generated key pair into the RSA key types
-
+      
       final myPublic = pair.publicKey as RSAPublicKey;
       final myPrivate = pair.privateKey as RSAPrivateKey;
 
       return AsymmetricKeyPair<RSAPublicKey, RSAPrivateKey>(
           myPublic, myPrivate);
-    }
-
-    SecureRandom exampleSecureRandom() {
-      final secureRandom = FortunaRandom();
-
-      final seedSource = Random.secure();
-      final seeds = <int>[];
-      for (int i = 0; i < 32; i++) {
-        seeds.add(seedSource.nextInt(255));
-      }
-      secureRandom.seed(KeyParameter(Uint8List.fromList(seeds)));
-      return secureRandom;
     }
 
     final pair = generateRSAkeyPair(exampleSecureRandom());
@@ -71,7 +54,7 @@ Creating a XDC account
     var bytesPrivate = utf8.encode(private_key); //Private
     var sha1Result = sha1.convert(bytes);
     var sha256Result = sha256.convert(bytesPrivate);
-```
+
 Create an instance of XDC3DART. This will provide you access to a set of functions interacting with the blockchain.
 ```
 guard let clientUrl = URL(string: "https://apothem-or-mainnet-url") else { return }

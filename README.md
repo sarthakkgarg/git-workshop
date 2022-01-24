@@ -19,9 +19,6 @@ it, simply add the following command to your project:
 dart pub add XDC3DART
 ```
 
-```
-$ pod install
-```
 then 
 
 Import 'package:XDC3DART';
@@ -85,11 +82,9 @@ final client = Web3Client(rpcUrl, Client(), socketConnector: () {
 
 ```
 Now, we can interact with the XRC20 methods
-```
 ### XRC20 Read methods
 
 Creating an instance of XRC20
-
 Now, we can interact with the XRC20 read methods.
 
 name() → string Returns the name of the token.
@@ -97,8 +92,9 @@ name() → string Returns the name of the token.
         await client.call(contract: contract, function: tokenName, params: []);
     return '$name';
 ```
-```        
+      
 balanceOf(address token,address account) → uint256  Returns the amount of tokens owned by account.
+
 ```
  final balanceOf = await client.call(
         contract: contract, function: tokenBalanceOf, params: [ownerAddress]);
@@ -109,7 +105,6 @@ balanceOf(address token,address account) → uint256  Returns the amount of toke
 ### XRC20 Write methods
 
 For write methods, we need token owner private keys
-```
 
 transfer(address token, address recipient, uint256 amount) → Moves amount tokens from the caller’s account to recipient. It will return a transaction hash.
 ```

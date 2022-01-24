@@ -57,18 +57,13 @@ Creating a XDC account
 
 Create an instance of XDC3DART. This will provide you access to a set of functions interacting with the blockchain.
 ```
-guard let clientUrl = URL(string: "https://apothem-or-mainnet-url") else { return }
+      final client = Web3Client(rpcUrl, Client(), socketConnector: () {
+      return IOWebSocketChannel.connect(wsUrl).cast<String>();
 
 ```
-final client = Web3Client(rpcUrl, Client(), socketConnector: () {
-  return IOWebSocketChannel.connect(wsUrl).cast<String>();
 
-```
 Now, we can interact with the XRC20 methods
-### XRC20 Read methods
-
-Creating an instance of XRC20
-Now, we can interact with the XRC20 read methods.
+XRC20 Read methods
 
 name() → string Returns the name of the token.
 ```  final name =

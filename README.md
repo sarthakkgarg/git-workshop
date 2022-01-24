@@ -110,7 +110,6 @@ balanceOf(address token,address account) → uint256  Returns the amount of toke
 
 For write methods, we need token owner private keys
 ```
-```
 
 transfer(address token, address recipient, uint256 amount) → Moves amount tokens from the caller’s account to recipient. It will return a transaction hash.
 ```
@@ -125,7 +124,7 @@ transfer(address token, address recipient, uint256 amount) → Moves amount toke
         chainId: null, fetchChainIdFromNetworkId: true);
     return ('$transferDetails');
   }
- ```       
+  ```
 approve(address token, address spender, uint256 amount) → Sets amount as the allowance of spender over the caller’s tokens. It will return a transaction hash.
 
 ```
@@ -139,7 +138,7 @@ approve(address token, address spender, uint256 amount) → Sets amount as the a
 }
 ``` 
 
-#### For increaseAllowance and decreaseAllowance we need an instance of XRC20 and private key of owner: 
+For increaseAllowance and decreaseAllowance we need an instance of XRC20 and private key of owner: 
  
 increaseAllowance(XDCAccount account, address token, address owner, address spender, uint256 subtractedValue)
 Automically increases the allowance granted to spender by the caller.
